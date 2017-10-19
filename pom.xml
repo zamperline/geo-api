@@ -74,6 +74,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-jpamodelgen</artifactId>
+			<scope>import</scope>
 		</dependency>
 
 		<dependency>
