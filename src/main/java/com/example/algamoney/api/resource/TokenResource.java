@@ -18,13 +18,13 @@ import com.example.algamoney.api.config.property.AlgamoneyApiProperty;
 public class TokenResource {
 	
 	@Autowired
-	private AlgamoneyApiProperty lgamoneyApiProperty;
+	private AlgamoneyApiProperty algamoneyApiProperty;
 
 	@DeleteMapping("/revoke")
 	public void revoke(HttpServletRequest req, HttpServletResponse resp) {
 		Cookie cookie = new Cookie("refreshToken", null);
 		cookie.setHttpOnly(true);
-		cookie.setSecure(lgamoneyApiProperty.getSeguranca().isEnableHttps());
+		cookie.setSecure(algamoneyApiProperty.getSeguranca().isEnableHttps());
 		cookie.setPath(req.getContextPath() + "/oauth/token");
 		cookie.setMaxAge(0);
 		
