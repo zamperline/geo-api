@@ -23,7 +23,7 @@ import com.example.algamoney.api.config.property.AlgamoneyApiProperty;
 public class CorsFilter implements Filter {
 
 	@Autowired
-	AlgamoneyApiProperty algamoneyApiProperty;
+	private AlgamoneyApiProperty algamoneyApiProperty;
 	
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
@@ -54,4 +54,5 @@ public class CorsFilter implements Filter {
 	@Override
 	public void init(FilterConfig arg0) throws ServletException {
 	}
+
 }
