@@ -16,7 +16,6 @@ CREATE TABLE lancamento (
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE  public.lancamento OWNER TO postgres;
 
 INSERT INTO lancamento (descricao, data_vencimento, data_pagamento, valor, observacao, tipo, id_categoria, id_pessoa) values ('Lanche', '2017-06-10', null, 10.20, null, 'DESPESA', 1, 1);
 INSERT INTO lancamento (descricao, data_vencimento, data_pagamento, valor, observacao, tipo, id_categoria, id_pessoa) values ('Eletrônicos', '2017-04-10', '2017-04-10', 2100.32, null, 'DESPESA', 2, 4);

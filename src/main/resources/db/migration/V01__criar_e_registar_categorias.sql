@@ -9,7 +9,6 @@ CREATE TABLE public.categoria
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE  public.categoria OWNER TO postgres;
   
 INSERT INTO public.categoria (nome) VALUES('Lazer');
 INSERT INTO public.categoria (nome) VALUES('Alimentação');

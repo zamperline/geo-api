@@ -9,7 +9,6 @@ CREATE TABLE usuario (
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE  public.usuario OWNER TO postgres;
 
 CREATE SEQUENCE permissao_id_seq;
 CREATE TABLE permissao (
@@ -20,7 +19,6 @@ CREATE TABLE permissao (
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE  public.permissao OWNER TO postgres;
 
 
 CREATE TABLE usuario_permissao (
@@ -33,7 +31,6 @@ CREATE TABLE usuario_permissao (
 WITH (
   OIDS=FALSE
 );
-ALTER TABLE  public.usuario_permissao OWNER TO postgres;
 
 INSERT INTO usuario (nome, email, senha) values ('Administrador', 'admin@algamoney.com', '$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.');
 INSERT INTO usuario (nome, email, senha) values ('Maria Silva', 'maria@algamoney.com', '$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq');
