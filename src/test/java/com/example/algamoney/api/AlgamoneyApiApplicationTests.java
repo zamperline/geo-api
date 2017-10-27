@@ -1,4 +1,4 @@
-package com.example.algamoney;
+package com.example.algamoney.api;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
