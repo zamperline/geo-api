@@ -31,7 +31,6 @@ public class CorsFilter implements Filter {
 		
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) resp;
-		System.out.println("----------------> " + algamoneyApiProperty.getOriginPermitida());
 		response.setHeader("Access-Control-Allow-Origin", algamoneyApiProperty.getOriginPermitida());
         response.setHeader("Access-Control-Allow-Credentials", "true");
 		
