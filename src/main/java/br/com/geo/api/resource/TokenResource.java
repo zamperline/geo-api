@@ -11,20 +11,20 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.geo.api.config.property.AlgamoneyApiProperty;
+import br.com.geo.api.config.property.GeoApiProperty;
 
 @RestController
 @RequestMapping("/tokens")
 public class TokenResource {
 	
 	@Autowired
-	private AlgamoneyApiProperty algamoneyApiProperty;
+	private GeoApiProperty geoApiProperty;
 
 	@DeleteMapping("/revoke")
 	public void revoke(HttpServletRequest req, HttpServletResponse resp) {
 		Cookie cookie = new Cookie("refreshToken", null);
 		cookie.setHttpOnly(true);
-		cookie.setSecure(algamoneyApiProperty.getSeguranca().isEnableHttps());
+		cookie.setSecure(geoApiProperty.getSeguranca().isEnableHttps());
 		cookie.setPath(req.getContextPath() + "/oauth/token");
 		cookie.setMaxAge(0);
 		

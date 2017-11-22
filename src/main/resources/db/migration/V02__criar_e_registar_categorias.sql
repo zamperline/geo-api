@@ -1,6 +1,8 @@
+DROP SEQUENCE IF EXISTS categoria_id_seq;
+
 CREATE SEQUENCE categoria_id_seq;
 
-CREATE TABLE public.categoria
+CREATE TABLE categoria
 (
   id bigint DEFAULT nextval('categoria_id_seq') NOT NULL,
   nome VARCHAR(255) NOT NULL,

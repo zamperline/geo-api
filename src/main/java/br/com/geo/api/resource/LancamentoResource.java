@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.geo.api.event.RecursoCriadoEvent;
-import br.com.geo.api.exceptionHandler.AlgamoneyExceptionHandler.Erro;
+import br.com.geo.api.exceptionHandler.GeoExceptionHandler.Erro;
 import br.com.geo.api.model.Lancamento;
 import br.com.geo.api.repository.LancamentoRepository;
 import br.com.geo.api.repository.filter.LancamentoFilter;

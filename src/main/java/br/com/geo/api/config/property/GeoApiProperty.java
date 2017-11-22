@@ -2,8 +2,8 @@ package br.com.geo.api.config.property;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties("algamoney")
-public class AlgamoneyApiProperty {
+@ConfigurationProperties("geo")
+public class GeoApiProperty {
 
 	private String originPermitida = "http://localhost:4200";
 

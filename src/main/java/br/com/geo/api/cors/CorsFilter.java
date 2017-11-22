@@ -16,14 +16,14 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-import br.com.geo.api.config.property.AlgamoneyApiProperty;
+import br.com.geo.api.config.property.GeoApiProperty;
 
 @Component
 @Order(Ordered.HIGHEST_PRECEDENCE)
 public class CorsFilter implements Filter {
 
 	@Autowired
-	private AlgamoneyApiProperty algamoneyApiProperty;
+	private GeoApiProperty geoApiProperty;
 	
 	@Override
 	public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain)
@@ -31,10 +31,10 @@ public class CorsFilter implements Filter {
 		
 		HttpServletRequest request = (HttpServletRequest) req;
 		HttpServletResponse response = (HttpServletResponse) resp;
-		response.setHeader("Access-Control-Allow-Origin", algamoneyApiProperty.getOriginPermitida());
+		response.setHeader("Access-Control-Allow-Origin", geoApiProperty.getOriginPermitida());
         response.setHeader("Access-Control-Allow-Credentials", "true");
 		
-		if ("OPTIONS".equals(request.getMethod()) && algamoneyApiProperty.getOriginPermitida().equals(request.getHeader("Origin"))) {
+		if ("OPTIONS".equals(request.getMethod()) && geoApiProperty.getOriginPermitida().equals(request.getHeader("Origin"))) {
 			response.setHeader("Access-Control-Allow-Methods", "POST, GET, DELETE, PUT, OPTIONS");
         	response.setHeader("Access-Control-Allow-Headers", "Authorization, Content-Type, Accept");
         	response.setHeader("Access-Control-Max-Age", "3600");

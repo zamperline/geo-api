@@ -1,3 +1,4 @@
+DROP SEQUENCE IF EXISTS lancamento_id_seq;
 CREATE SEQUENCE lancamento_id_seq;
 CREATE TABLE lancamento (
 	id bigint DEFAULT nextval('lancamento_id_seq') NOT NULL,

@@ -1,3 +1,4 @@
+DROP SEQUENCE IF EXISTS pessoa_id_seq;
 CREATE SEQUENCE pessoa_id_seq;
 CREATE TABLE pessoa (
 	id bigint DEFAULT nextval('pessoa_id_seq') NOT NULL,

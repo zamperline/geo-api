@@ -4,13 +4,13 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
-import br.com.geo.api.config.property.AlgamoneyApiProperty;
+import br.com.geo.api.config.property.GeoApiProperty;
 
 @SpringBootApplication
-@EnableConfigurationProperties(AlgamoneyApiProperty.class)
-public class AlgamoneyApiApplication {
+@EnableConfigurationProperties(GeoApiProperty.class)
+public class GeoApiApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(AlgamoneyApiApplication.class, args);
+		SpringApplication.run(GeoApiApplication.class, args);
 	}
 }
