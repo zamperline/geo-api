@@ -5,8 +5,10 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties("geo")
 public class GeoApiProperty {
 
+
 	private String originPermitida = "https://geo-municipio-ui.herokuapp.com";
 
+	
 	private final Seguranca seguranca = new Seguranca();
 
 	public Seguranca getSeguranca() {
