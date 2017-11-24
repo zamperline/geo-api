@@ -34,8 +34,8 @@ WITH (
   OIDS=FALSE
 );
 
-INSERT INTO usuario (nome, email, senha) values ('Administrador', 'admin@rz.com', '$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.');
-INSERT INTO usuario (nome, email, senha) values ('Maria Silva', 'maria@rz.com', '$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq');
+INSERT INTO usuario (nome, email, senha) values ('Administrador', 'admin@geo.com', '$2a$10$X607ZPhQ4EgGNaYKt3n4SONjIv9zc.VMWdEuhCuba7oLAL5IvcL5.');
+INSERT INTO usuario (nome, email, senha) values ('Maria Silva', 'maria@geo.com', '$2a$10$Zc3w6HyuPOPXamaMhh.PQOXvDnEsadztbfi6/RyZWJDzimE8WQjaq');
 
 INSERT INTO permissao (descricao) values ('ROLE_CADASTRAR_CATEGORIA');
 INSERT INTO permissao (descricao) values ('ROLE_PESQUISAR_CATEGORIA');
