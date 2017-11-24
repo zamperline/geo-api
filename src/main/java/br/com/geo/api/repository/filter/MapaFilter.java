@@ -7,6 +7,8 @@ public class MapaFilter {
 	private String latCenter;
 	private String lngCenter;
 	
+	private Integer opcao;
+	
 	public Bounds getBounds() {
 		return bounds;
 	}
@@ -24,5 +26,11 @@ public class MapaFilter {
 	}
 	public void setLngCenter(String lngCenter) {
 		this.lngCenter = lngCenter;
+	}
+	public Integer getOpcao() {
+		return opcao;
+	}
+	public void setOpcao(Integer opcao) {
+		this.opcao = opcao;
 	}
 }
