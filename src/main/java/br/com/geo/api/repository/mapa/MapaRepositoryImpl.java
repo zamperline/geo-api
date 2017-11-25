@@ -56,7 +56,7 @@ public class MapaRepositoryImpl implements MapaRepositoryQuery {
 				"	SELECT 'FeatureCollection' As type, array_to_json(array_agg(f)) As features\r\n" + 
 				"	FROM (\r\n" + 
 				"		SELECT 'Feature' As type, ST_X(st_transform(st_centroid(geom), 4326)) as longitude, ST_Y(st_transform(st_centroid(geom), 4326)) as latitude,\r\n" + 
-				"		(SELECT row_to_json((SELECT x FROM (SELECT zoneamento.\"zoneamento\" as \"Zoneamento\", zoneamento.\"NOME\" as \"Descrição\", ST_X(st_transform(st_centroid(geom), 4326)) as lng, ST_Y(st_transform(st_centroid(geom), 4326)) as lat, '#000000' AS \"stroke\", 2 as \"stroke-width\", 1 as \"stroke-opacity\", zoneamento.\"cor\" as fill, 0.8 as \"fill-opacity\") x),false)) as properties,\r\n" + 
+				"		(SELECT row_to_json((SELECT x FROM (SELECT zoneamento.\"zoneamento\" as \"Zoneamento\", zoneamento.\"NOME\" as \"Descrição\", ST_X(st_transform(st_centroid(geom), 4326)) as lng, ST_Y(st_transform(st_centroid(geom), 4326)) as lat, '#000000' AS \"stroke\", 2 as \"stroke-width\", 1 as \"stroke-opacity\", zoneamento.\"cor\" as fill, 0.6 as \"fill-opacity\") x),false)) as properties,\r\n" + 
 				"		ST_AsGeoJSON(st_transform(((ST_DUMP(geom)).geom),4326)\\:\\:geometry('Polygon',4326))\\:\\:json As geometry\r\n" + 
 				"		FROM (\r\n" + 
 				"			SELECT *, st_transform(((ST_DUMP(geom)).geom),4326)\\:\\:geometry('Polygon',4326)\\:\\:geography as polygon\r\n" + 
